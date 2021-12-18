@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\EventsController;
 use App\Http\Controllers\GreetController;
+use App\Http\Controllers\SortController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/greet/{name}', GreetController::class);
+
+Route::get('/sort/{numbers?}', SortController::class)->where('numbers', '.*');
