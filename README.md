@@ -34,4 +34,4 @@ They are located on the `./resources/js/Pages` directory, as specified on the `c
 
 -- 
 
-Simply register a route on the `web.php` file and attach a controller to it. The controller should return an `Inertia` response object, which links to a Vue single file component.
+Simply register a route on the `web.php` file and attach a controller to it. The controller should return an `Inertia` response object, which links to a Vue single file component. 
