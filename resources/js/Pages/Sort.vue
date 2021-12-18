@@ -10,13 +10,21 @@ export default {
         sortable: {
             type: Array,
             required: true
+        },
+        sortDirection: {
+            type: String,
+            required: true
         }
     },
 
     data() {
         return {
             sorted: this.sortable.sort((a, b) => {
-                return Math.sign(a > b);
+                if (this.sortDirection === 'asc') {
+                    return Math.sign(a - b);
+                }
+
+                return Math.sign(b - a);
             }).join(', ')
         }
     }

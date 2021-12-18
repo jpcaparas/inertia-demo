@@ -21,4 +21,4 @@ Route::get('/', function () {
 
 Route::get('/greet/{name}', GreetController::class);
 
-Route::get('/sort/{numbers?}', SortController::class)->where('numbers', '.*');
+Route::get('/sort/{sortDirection}/{numbers?}', SortController::class)->where('numbers', '.*');
