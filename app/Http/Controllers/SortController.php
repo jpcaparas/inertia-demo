@@ -10,6 +10,10 @@ class SortController extends Controller
     {
         $sortable = array_map('trim', explode('/', $params));
 
+        $sortable = array_map('intval', $sortable);
+
+        $sortable = array_values(array_unique($sortable));
+
         return inertia('Sort', [
             'sortDirection' => $sortDirection,
             'sortable' => $sortable
